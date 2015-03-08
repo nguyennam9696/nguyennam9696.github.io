@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nom Nom  |  Blah Blah Blogs</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+  </head>
+
+  <body>
+    <header>
+        <div id="navArea"></div>
+          <ul id="nav">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Inside My Mind</li></a>
+            <a href="#"><li>Nam's Project Portfolio</li></a>
+            <a href="#"><li>Skills</li></a>
+            <a href="#"><li>Contact</li></a>
+          </ul>
+        <div id="logoArea"></div>
+          <h1>Nom Nom</h1>
+          <h1>Blah Blah Blogs</h1>
+          <h5>"#1 World's Worst Code Blogs"</h5>
+        <img src="http://ocobiega.org/wp-content/uploads/2011/01/Nomdonuts.jpg" width="250" height="250">
+    </header>
+    <div id="author">
+      <p>Written by: Nam Hoang Nguyen</p>
+      <p>Thomas A. Edison: 'I have not failed. I've just found 10000</p>
+      <p>ways that won't work."</p>
+    </div>
+    <div id="line"><img src="http://www.cluster2.hostgator.co.in/files/writeable/uploads/hostgator20657/image/stock-illustration-149644-vector-rule-line-divider.jpg" alt="placeholder+image"></div>
+
+    <main>
+      <h2>Ruby: Enumberable Method</h2>
+      <h3>Enumerable: What it is &amp; How to use it</h3>
+      <p>An Enumerable method in Ruby language is defined as a <i>"mixin that provides a collection of classes with several traversal and searching methods, and with the ability to sort." - Ruby Doc Core.</i> What does this all mean? Hmm.. Let's break things down to the human language. Let's begin with the term "mixin." For other languages, code sharing is done through the use of mixin between different classes. Imagine an English classroom. How is an English teacher to share his/her curriculum to other English teachers? In Ruby language, this curriculum can only be inherited from one teacher to another. However, with the use of Enumerables, the curriculum is allowed to be "mixed-in" or shared to another teacher across many different teachers if they like that English curriculum of course. Simple enough? It is.</p>
+      <p>Alright. That is mixin, but what about <b><i>Enumerable</i></b>? Enumerable is a module that can be mixed in to classes. Enumerable contains a BUNCH of methods that works with collection of code block. It is very useful to know Enumerable. It notably empowers <i>Array, Hash, Set, Range, and File classes</i>. Look at all of these <i>Enumerable methods</i> below.</p>
+        <img src="Screen Shot 2015-03-05 at 7.53.02 PM.png" alt="enumerable_method">
+      <p>In order for a class to use Enumerable, it must define an <b><i>#each</i></b> method. What the <b><i>#each</i></b> method does is that it passes each item in the collection to the code block. </p>
+        <img src="Screen Shot 2015-03-05 at 10.05.54 PM.png" alt="enumerable_how">
+      <h3>Enumerable#map</h3>
+      <p>The map method is one of the most important enumerable method in Ruby. Whatever the case is for enumerable, <b><i>#map</i></b> always returns an array. Awesome! It spits back out the same size as the original enumerable. 4 objects in the enumerable would equate to 4 objects in the array. #map method is different from #each method in the enumerable module because it maintains an accumular array of the results from the block. puts and map together will return nil, so becareful about that.</p>
+        <img src="Screen Shot 2015-03-06 at 9.06.13 PM.png" alt="map">
+        <img src="Screen Shot 2015-03-06 at 11.12.53 PM.png" alt="map_sucks">
+      <h3>Enumerable#group_by</h3>
+      <p>A #group_by method on an enumerable object takes the code block and returns a hash. Opposite from #map method because #map method returns an array. This code block executes for each of the object. Naturally, a hash has a key and a value. In this case, what would be our key and value? Our key would be the result of the hash. The value would be the array for all of the enumerable objects.</p>
+      <h3>Enumerable#cycle</h3>
+      <p>Just like your bicycle where your wheel spins round and round again and again, the <b><i>#cycle</i></b> method spits out the object over and over again in a loop. If you provide Ruby how many times you want to loop it, then it will loop for that many times only. If not, Ruby will loop forever. </p>
+        <img src="Screen Shot 2015-03-07 at 4.26.18 PM.png" alt="cycle">
+    </main>
+
+    <div id="line"><img src="http://www.cluster2.hostgator.co.in/files/writeable/uploads/hostgator20657/image/stock-illustration-149644-vector-rule-line-divider.jpg" alt="placeholder+image"></div>
+    <div id="footer">
+      <p>Nam Hoang Nguyen</p>
+      <p>Github Website: <a href="https://github.com/nguyennam9696">https://github.com/nguyennam9696</a></p>
+      <p>LinkedIn Website: <a href="https://www.linkedin.com/in/namnguyen1991entrepreneur">https://www.linkedin.com/in/namnguyen1991entrepreneur.en</a></p>
+    </div>
+</body>
+</html>
+
