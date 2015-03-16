@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<htm lang="en"l>
+  <head>
+    <title>Nom Nom  |  Blah Blah Blogs</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+        <div id="navArea"></div>
+          <ul id="nav">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Inside My Mind</li></a>
+            <a href="#"><li>Nam's Project Portfolio</li></a>
+            <a href="#"><li>Skills</li></a>
+            <a href="#"><li>Contact</li></a>
+          </ul>
+        <div id="logoArea"></div>
+          <h1>Nom Nom</h1>
+          <h1>Blah Blah Blogs</h1>
+          <h5>"#1 World's Worst Code Blogs"</h5>
+        <img src="http://ocobiega.org/wp-content/uploads/2011/01/Nomdonuts.jpg" width="250" height="250">
+    </header>
+    <div id="author">
+      <p>Written by: Nam Hoang Nguyen</p>
+      <p>Thomas A. Edison: 'I have not failed. I've just found 10000</p>
+      <p>ways that won't work."</p>
+    </div>
+    <div id="line"><img src="http://www.cluster2.hostgator.co.in/files/writeable/uploads/hostgator20657/image/stock-illustration-149644-vector-rule-line-divider.jpg" alt="placeholder+image"></div>
+
+    <main>
+      <h2>Ruby Language: Inheritance vs. Composition</h2>
+      <h3>Inheritance</h3>
+      <img src="Screen Shot 2015-03-15 at 4.14.33 PM.png" alt="inheritance">
+      <p>If you take a look at the image above, the concept of inheritance should seem familiar to you. You inherit "stuff" from your parent right? And you are your parent's child. Cool. Simple enough. Parent passes on their genes to you. In code, when you inherit something from your parent, you inherit "attributes" and "instance variables" from your parent. Your parent are called <code>superclass</code> and the children of the parent are called <code>subclass</code>.</p>
+      <p>Let's just say your parent class was Animal. The <code>subclass</code> is Cow, Pig, and Duck. You already know that you can inherit "similar" traits such as </p>
+      <p>First, let's go into a little bit more in depth ghetto theory. What does cows, pigs, and ducks have in common? They are all animals. They all breathe, eat, sleep, walk. These can all be inherited from the <code>superclass</code> or parent. And if I want to change the characteristic of the ladder down classes? Of course you can because we all know that not all the attributes are the same. The cow can say "Moo!" but the duck can't say "Moo!" as well. Even if they inherit a general attribute and instances, they can also have their own.</p>
+      <p>Second, how you show a <code>subclass</code> is by writing: "class <code>subclass</code> &lt; <code>superclass</code>." **&lt; means inherit from.</p>
+      <img src="Screen Shot 2015-03-15 at 5.34.05 PM.png" alt="inheritance example" width="500px">
+      <p>Can you identify the <code>superclass</code> and the <code>subclass</code>? What would be the difference? Hopefully, by now you can see the major uses to inheritance. This makes your code cleaner and more structured / orderly. Easily make your code DRY.
+      <p><i>A class can only inherit from one class at a time</i> (i.e. a class can inherit from a class that inherits from another class which inherits from another class, but a single class can not inherit from many classes at once). If a <code>subclass</code> uses an instance variable with the same name as a variable used by one of its predecessors, it will overwrite the value of its predecessor's variable.</p>
+      <h3>Composition</h3>
+      <img src="Screen Shot 2015-03-15 at 6.17.19 PM.png" alt="composition">
+      <p>Composition is not the same as inheritance. There is no parent-child relationship :( sadness. However, we can think of it as a "has-a" relationship rather than a "parent-child" relationship. Composition uses modules which is creating a relationship by calling back the functions of previously stated methods. When you compose something, think about music, you put together all the elements together from trumpet, to violin, to bass, to piano altogether makes a great Jazz piece. You don't have a parent-child relationship, but the relationship of each other and the harmony the instruments make with each other makes it a better piece of work. That is the beauty of Composition.</p>
+      <img src="Screen Shot 2015-03-15 at 6.17.26 PM.png" alt="composition example">
+      <h3>Composition over Inheritance? OR Inheritance over Composition . . .</h3>
+      <p>The simple answer is, depends on how you want to solve the problem. If you don't want to duplicate codes, inheritance will do the trick. Composition can also solve this by providing you modules &amp; the ability to call the functions in other classes. Both can tackle reused code problems. However, if you take a look carefully, inheritance banks upon relatability versus composition can call methods nested in classes.</p>
+        <ul>
+          <li>1) Use composition to make a clean nice code into modules so you can use it in many different and unrelated situations</li>
+          <li>2) Use inheritance when you know these codes logically would fit under an umbrella of commonality.</li>
+        </ul>
+    </main>
+
+    <div id="line"><img src="http://www.cluster2.hostgator.co.in/files/writeable/uploads/hostgator20657/image/stock-illustration-149644-vector-rule-line-divider.jpg" alt="placeholder+image"></div>
+    <div id="footer">
+      <p>Nam Hoang Nguyen</p>
+      <p>Github Website: <a href="https://github.com/nguyennam9696">https://github.com/nguyennam9696</a></p>
+      <p>LinkedIn Website: <a href="https://www.linkedin.com/in/namnguyen1991entrepreneur">https://www.linkedin.com/in/namnguyen1991entrepreneur.en</a></p>
+    </div>
+</body>
+</html>
+
