@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<htm lang="en">
+  <head>
+    <title>Ruby Language | Cheat Sheet</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+        <div id="logoArea"></div>
+          <h1>Ruby Cheat Sheet</h1>
+          <h5>"DevBootcamp's #1 Ruby Survival Kit"</h5>
+        <img src="keep-calm-and-learn-ruby-on-rails-8.png" width="700" height="400">
+    </header>
+    <div id="author">
+      <p>Written by: Nam Hoang Nguyen &amp; Shannon Staszak</p>
+      <p>2015 Pocket Gopher Cohort</p>
+      <blockquote>Thomas A. Edison: 'I have not failed. I've just found 10000 ways that won't work."</blockquote>
+    </div>
+    <div id="line-top"><img src="ruby_divider.png" alt="ruby"></div>
+
+    <main>
+
+    <h2>Week 3 - "Intro to Ruby"</h2>
+      <h3>3 Big Dog Data Types (you need to know to heart)</h3>
+        <h4><li><b>1) Numbers (Integers vs Floats)</b></li></h4>
+              <p>Integers and Floats are both numbers.</p>
+              <p>Integer = 1, 2, 3, 4, 5 (whole numbers)</p>
+                <ul><li><p>9/2 = 4 instead of 4.5 (ruby will round down an integer)</p></li></ul>
+              <p>Float = 1.0, 2.0, 3.0, 4.0, 5.0 (decimals)</p>
+              <ul><li><p>123.0.to_i = 123 (change to integer)</p>
+                                          <p>123.to_f = 123.0 (change to float)</p>
+                                          <p>123.to_s = "123" (change to string)</p></li></ul>
+              <ul><li><p>2 + 2 = 4</p>
+                                          <p>2 - 2 = 0</p>
+                                          <p>2 * 2 = 4</p>
+                                          <p>2 / 2 = 1</p>
+                                          <p>2 % 2 = 0 (Modulo, is like division, but only take the remainder as the output)</p>
+                                          <p>22 % 4 = 2 (4 * 5 is 20 so the remainder is 2)</p></ul></li>
+
+        <h4><li><b>2) Booleans (True or False)</b></li></h4>
+              <p>If you deal with conditional statements such as if/else/elsif/unless/while etc. you will encounter booleans </p>
+              <p><b>Logical Operators: (&&, ||, !)</b></p>
+                 <ul><li>|| (“or)</li>
+                                  <li>&& (“and”)</li>
+                                  <li>! (“not”)</li></ul>
+              <img src="Screen Shot 2015-03-29 at 6.23.15 PM.png" alt="boolean">
+
+
+      <h3><b>3) Strings (Letters, NOT NUMBERS!)</b></h3>
+        <h4>*Not Allowed to do for Strings!</h4>
+          <ul><li>case sensitive (cares about capitilization)</li>
+                    <li>you can't add a number to a string</li>
+                    <li>you multiply a string by another string</li>
+                      <p>example: 'Fred' * 'John' = ERROR!</p>
+                      <p>example: 'Fred' + 12 = ERROR!</p>
+                      <p>*Just remember these two and you would be fine. Everything else you are allowed to do.</p></ul>
+        <h4>*Allowed to do for Strings!</h4>
+          <ul><li>add two strings together</li>
+                      <p>example: 'I like' + 'apple pie.' (ties the strings together)</p>
+                    <li>arithmetic with strings and numbers (but be careful!)</li>
+                      <p>2 * 5 = 10</p>
+                      <p>‘2’ * 5 = 22222</p>
+                      <p>‘2 * 5’ = 2 * 5</p></ul>
+
+      <h3><b>Variables</b></h3>
+        <p>Just like in mathematics, variables can be anything (word or name) that represents something. In this case that something is what we call a "value." To store the string in your computer’s memory for use later in your program, you need to give the string a name. Programmers often refer to this process as assignment, and they call the names variables. Variables are assignments that stores the strings into computer memory so you don’t have to retype the string again and again.</p>
+        <h4>Syntax:</h4>
+          <ul><li>my_num = value</li>
+                    <li>my_num is a variable</li>
+                    <li>value is what is being assigned to the variable my_num which could be a string, number, boolean.</li>
+                    <li>often don't use myNum (camelcasing) in Ruby</li>
+                    <li>lower case with underscore to separate two words for readability</li></ul>
+
+        <h4>Types of Variables: Local, Instance, Class, Global</h4>
+         <ul> <li>1) Local Variable – start with lowercase or an underscore & consists of letters, underscores and/or digits</li>
+                      <p>x, string, __abc__, start_value, and firstName </p>
+                      <p>firstName (camelcase) is not used however it is still valid</p>
+                      <p>Instead an underscore is used in replacement of the camelcase</p>
+                   <li>2) Instance Variables (@) – stores information for INDIVIDUAL objects</li>
+                      <p>@age</p>
+                      <p>@last_name</p>
+                   <li>3) Class Variables (@@)– stores information per class hierarchy (same thing as instance variables)</li>
+                      <p>@@running_total</p>
+                   <li>4) Global Variables ($) –  Anything followed by $ is global & each variables are predefined so don’t need to worry about mark errors</li>
+                      <p>$population</p>
+                      <p>$:, $1, and $/, as well as $stdin and $LOAD_PATH.</p></ul>
+        <h2>Week 4 - "Ruby Collection Types and Enumerables"</h2>
+  <h3>1) Methods</h3>
+    <ul>
+      <li>an executable action an object can trigger</li>
+      <li>naming conventions: same rules as variables</li>
+      <li>called with a "." (although some don't)</li>
+      <li>can take arguments in "()", although not necessary</li>
+      <li>Example:</li>
+      <code>x.is_a?(Integer)</code>
+    </ul>
+
+  <h3>2) Data Structures:</h3>
+    <h4>Arrays</h4>
+      <ul>
+        <li>a collection of objects each with a consistent numerical index</li>
+        <li>constructed with []</li>
+      </ul>
+
+    <h4>Hashes</h4>
+      <ul>
+        <li>an ordered collection of objects which are stored in key and value pairs</li>
+        <li>constructed with {}</li>
+      </ul>
+
+  <h3>3) Enumerable</h3>
+    <ul>
+      <li>a module that provide a set of methods to traverse, search, sort, and manipulate collections</li>
+    </ul>
+
+    <h4>each method</h4>
+      <ul>
+        <li>also known as "iterator"; cycles through code of block that acts or depends on each element in collection</li>
+        <li>Example:</li>
+        <code>["labrador", "beagle", "collie"].each { |breed| puts breed }</code>
+      </ul>
+
+    <h4>each_with_index method</h4>
+      <ul>
+        <li>same as each with an extra argument for index</li>
+        <li>Example:</li>
+        <code>["labrador", "beagle", "collie"].each_with_index do |breed, idx|
+                puts breed if idx % 2 == 0
+              end</code>
+      </ul>
+
+    <h4>map method</h4>
+      <ul>
+        <li>similar to each but returns transformed collection</li>
+        <li>Example:</li>
+        <code>["labrador", "beagle", "collie"].map { |breed| breed.capitalize }</code>
+      </ul>
+
+
+
+<!-- Week 5 - "Ruby Classes"
+
+Classes
+
+Instance Variables
+
+Symbols
+
+Attr Attributes
+
+Nested Arrays
+
+Week 6 - "Object Oriented Design in Ruby"
+
+Driver Test Code
+
+Scope
+
+Refactoring
+
+
+
+
+ALSO:
+
+Splat operator
+
+p vs. print vs. puts
+
+if/else,
+while/do,
+case/when -->
+    </main>
+
+    <div id="line-bottom"><img src="ruby_divider.png" alt="ruby"></div>
+
+</body>
+</html>
+
